@@ -9,15 +9,32 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "dart-scope-builder.helloWorld",
-        "title": "Hello World"
+        "command": "dart-scope-builder.runBuildRunner",
+        "title": "Dart: Run build_runner build",
+        "category": "Dart Scope Builder"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "dart-scope-builder.runBuildRunner",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "dart-scope-builder.runBuildRunner",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
