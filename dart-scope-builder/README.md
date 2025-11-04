@@ -1,71 +1,26 @@
-# dart-scope-builder README
+# Dart Scope Builder
 
-This is the README for your extension "dart-scope-builder". After writing up a brief description, we recommend including the following sections.
+一个 VS Code 扩展，用于在指定范围内运行 Dart `build_runner build` 命令。
 
-## Features
+## 功能
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 右键文件或文件夹，快速执行 `build_runner build` 命令
+- 自动过滤指定范围内的文件
+- 支持在文件资源管理器和编辑器右键菜单中使用
 
-For example if there is an image subfolder under your extension project workspace:
+## 使用方法
 
-\!\[feature X\]\(images/feature-x.png\)
+1. 在文件资源管理器中右键点击文件或文件夹
+2. 选择 "Dart: Run build_runner build" 菜单项
+3. 扩展会自动在终端中执行 `dart run build_runner build --delete-conflicting-outputs --build-filter` 命令
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 要求
 
-## Requirements
+- Dart SDK 已安装并配置在 PATH 中
+- 项目已配置 `build_runner` 依赖
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## 发布说明
 
-## Extension Settings
+### 0.0.1
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+初始版本，支持在指定范围内运行 build_runner 命令。

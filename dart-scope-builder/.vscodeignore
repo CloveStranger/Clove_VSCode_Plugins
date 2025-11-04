@@ -1,14 +1,37 @@
+# Lock files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Source files
+src/**
+*.ts
+!*.d.ts
+
+# Test files
+test/**
+*.test.ts
+*.test.js
+out/**
+.vscode-test.mjs
+
+# Build configuration
+tsconfig.json
+esbuild.js
+eslint.config.mjs
+
+# Development files
 .vscode/**
 .vscode-test/**
-out/**
-node_modules/**
-src/**
-.gitignore
-.yarnrc
+.vscodeignore
 esbuild.js
+*.map
+
+# Documentation templates (keep README.md and CHANGELOG.md)
 vsc-extension-quickstart.md
-**/tsconfig.json
-**/eslint.config.mjs
-**/*.map
-**/*.ts
-**/.vscode-test.*
+
+# Other
+.gitignore
+.git/**
+*.log
+.DS_Store
